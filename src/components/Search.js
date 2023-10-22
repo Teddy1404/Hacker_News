@@ -3,6 +3,7 @@ import PostList from "../components/PostList";
 import axios from "axios";
 import hacker from "../components/images/hacker.png";
 import "../App.css";
+
 function Search() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -19,7 +20,7 @@ function Search() {
   };
 
   return (
-    <div className="bg-gray-800 p-5 text-center ">
+    <div className="p-5 text-center ">
       <div className="w-full md:flex">
         <img
           src={hacker}
@@ -44,7 +45,7 @@ function Search() {
           </div>
           <div className="w-full mt-4 flex flex-wrap">
             {results.map((post) => (
-              <div key={post.objectID} className="w-1/3 p-2">
+              <div key={post.objectID} className="md:w-1/3 p-2">
                 <PostList results={[post]} />
               </div>
             ))}

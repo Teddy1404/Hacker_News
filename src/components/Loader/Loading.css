@@ -1,7 +1,6 @@
-/* Loading.css */
 .loader {
   background-color: black;
-  height: 100vh;
+  height: 1500px;
   display: flex;
   align-items: center;
   justify-content: center;
