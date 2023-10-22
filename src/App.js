@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename="/Hacker_News">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Search />} />
         <Route path="/post/:postId" element={<PostDetail />} />

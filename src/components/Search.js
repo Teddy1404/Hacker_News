@@ -54,7 +54,7 @@ function Search() {
             {results.map((post) => (
               <div
                 key={post.objectID}
-                className="text-start text-yellow-500 italic hover:text-xl  p-2"
+                className="text-start text-yellow-500 italic hover:scale-100  p-2"
               >
                 <PostList results={[post]} />
               </div>
