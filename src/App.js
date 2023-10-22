@@ -6,9 +6,9 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Hacker_News">
       <Routes>
-        <Route path="/Hacker_News" element={<Search />} />
+        <Route path="/" element={<Search />} />
         <Route path="/post/:postId" element={<PostDetail />} />
       </Routes>
     </BrowserRouter>
