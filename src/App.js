@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Search />} />
+        <Route path="/Hacker_News" element={<Search />} />
         <Route path="/post/:postId" element={<PostDetail />} />
       </Routes>
     </BrowserRouter>
