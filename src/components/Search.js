@@ -50,9 +50,12 @@ function Search() {
               onChange={handleChange}
             />
           </div>
-          <div className="w-full mt-4 flex flex-wrap">
+          <div className="w-full mt-4  ">
             {results.map((post) => (
-              <div key={post.objectID} className="md:w-1/3 p-2">
+              <div
+                key={post.objectID}
+                className="text-start text-yellow-500 italic hover:text-xl  p-2"
+              >
                 <PostList results={[post]} />
               </div>
             ))}
