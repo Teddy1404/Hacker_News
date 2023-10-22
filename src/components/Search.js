@@ -19,6 +19,19 @@ function Search() {
     }
   };
 
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+
+    // Automatically update the results as you type
+    try {
+      axios
+        .get(`http://hn.algolia.com/api/v1/search?query=${e.target.value}`)
+        .then((response) => setResults(response.data.hits));
+    } catch (error) {
+      console.error("Error fetching search results", error);
+    }
+  };
+
   return (
     <div className="p-5 text-center ">
       <div className="w-full md:flex">
@@ -34,14 +47,8 @@ function Search() {
               type="text"
               placeholder="Search Hacker News"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={handleChange}
             />
-            <button
-              className="bg-orange-500 text-white rounded border-none p-2 cursor-pointer text-xl w-32 mx-3 h-12 mt-12"
-              onClick={handleSearch}
-            >
-              Search
-            </button>
           </div>
           <div className="w-full mt-4 flex flex-wrap">
             {results.map((post) => (
